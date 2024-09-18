@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                
+                <img src="https://stayeasyltd.com/wp-content/uploads/2020/12/cropped-logo.png" alt="HotelBooking Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Our Properties</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="search-bar">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search" onkeyup="filterProperties()">
+            <input type="date" id="checkin" placeholder="Check-in Date">
+            <input type="date" id="checkout" placeholder="Check-out Date">
+            <button>Search</button>
+        </div>
+    </section>
+    <div id="h1">
+       
+        <h1>WELCOME TO STAY EASY</h1>  
+   
+    </div>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://images.pexels.com/photos/2631746/pexels-photo-2631746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+    <!-- Home Section -->
+    <!-- <section id="home">
+        <div class="home-content">           
+            <h1>Welcome to HotelBooking</h1>
+            <p>Book your perfect stay with us!</p>
+        </div>
+       
+    </section> -->
+
+    <!-- Our Properties Section -->
+    <section id="properties">
+    <h2>Our Properties</h2>
+    <div class="property-cards" id="propertyCards">
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/2030037/pexels-photo-2030037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 1">
+            <h3>Compact yet beautiful</h3>
+            <p>1RK | Akshayanagr | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 2">
+            <h3>Compact yet beautiful</h3>
+            <p>1RK | Akshayanagr | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 3">
+            <h3>Compact yet beautiful</h3>
+            <p>1RK | Akshayanagr | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/27562192/pexels-photo-27562192/free-photo-of-residential-project-in-sulaymaniyah-city.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 4">
+            <h3>Beautiful Specious</h3>
+            <p>1BHK | Akshayanagr | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/6296928/pexels-photo-6296928.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 5">
+            <h3>Beautiful Specious</h3>
+            <p>1BHK | Akshayanagr | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/7174386/pexels-photo-7174386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 6">
+            <h3>Beautiful Specious</h3>
+            <p>1BHK | Akshayanagr | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/27164982/pexels-photo-27164982/free-photo-of-interior-design-of-bedroom.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 7">
+            <h3>Luxirious Room</h3>
+            <p>2BHK | Electronic-City | 4.9 &starf;</p> 
+            <h3>₹ 1799.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/7546711/pexels-photo-7546711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 8">
+            <h3>Luxirious Room</h3>
+            <p>2BHK | Electronic-City | 4.9 &starf;</p> 
+            <h3>₹ 1799.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/12870141/pexels-photo-12870141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 9">
+            <h3>Luxirious Room</h3>
+            <p>2BHK | Electronic-City | 4.9 &starf;</p> 
+            <h3>₹ 1799.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/13871318/pexels-photo-13871318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 10">
+            <h3>Peacefull Room</h3>
+            <p>1BHK | Whitefield | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/3935331/pexels-photo-3935331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 11">
+            <h3>Peacefull Room</h3>
+            <p>1BHK | Whitefield | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/9209422/pexels-photo-9209422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 12">
+            <h3>Peacefull Room</h3>
+            <p>1BHK | Whitefield | 4.9 &starf;</p> 
+            <h3>₹ 1399.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 13">
+            <h3>Comfort Living</h3>
+            <p>1BHK | J.P Nagar | 4.9 &starf;</p> 
+            <h3>₹ 1199.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property14">
+            <h3>Comfort Living</h3>
+            <p>1BHK | J.P Nagar | 4.9 &starf;</p> 
+            <h3>₹ 1199.00/ Day</h3>
+            <button>Book Now</button>
+        </div> 
+        <div class="property-card">
+            <img src="https://images.pexels.com/photos/1571450/pexels-photo-1571450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Property 15">
+            <h3>Comfort Living</h3>
+            <p>1BHK | J.P Nagar | 4.9 &starf;</p> 
+            <h3>₹ 1199.00/ Day</h3>
+            <button>Book Now</button>
+        </div>
+    </div>
+</section>
+<div id="heading-map">
+    <h1>Visit our Properties</h1>
+</div>
+<a href="https://www.google.com/maps/place/ANI+Living+Spaces+Private+limited/@12.8590149,77.6043143,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae6b04fe867435:0x56cd15983ab8b761!8m2!3d12.8590097!4d77.6068892!16s%2Fg%2F11n003fvn7?entry=ttu&g_ep=EgoyMDI0MDkwOC4wIKXMDSoASAFQAw%3D%3D">
+<button id="btn">Get Location</button>
+</a>
+<div class='map-container'>
+    <div class='map-wrapper'>
+        <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1Eh5UbfCjSPVyQXwkWWMTM9LBUkd1FSQ&ehbc=2E312F&noprof=1" width="600" height="500"></iframe>
+    </div>
+</div>
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing the best hospitality services to our guests.
+            Book your urban retreat today: modern, convenient service apartments designed for your comfort and convenience.
+        </p>
+        <div id="video">
+       <img src="https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+    </div>
+        <h2 id="h2">Why choose us?</h2>
+        <p1>
+            We’re not just offering a place to stay — we’re delivering a fully curated living experience <br> designed for your utmost comfort and satisfaction
+        </p1>
+     
+        <ul id="ul1">
+            
+            <li id="l1"><span>05</span><br> Year Of Excellence</li>
+            <li id="l1"><span>120+</span><br> Properties</li>
+            <li id="l1"><span>1000+</span><br> Happy Customers</li>
+          </ul>
+    </section>
+    <div id="teams">
+    <div id="team-heading">
+        <h1>Meet Our Teams</h1>
+      </div>  
+      <!-- Add a container for the cards -->
+      <div id="team-cards">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 1">
+          <h2>Mithilesh</h2>
+          <p>sr.Software Engineer</p>
+        </div>
+      
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 2">
+          <h2>Vikash</h2>
+          <p>Software Engineer</p>
+        </div>
+      
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 3">
+          <h2>Shani</h2>
+          <p>Software Engineer</p>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 STAY EASY. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
